@@ -1,0 +1,13 @@
+- hosts: webserver
+  tasks:
+  - debug:
+      msg: Configure Httpd Server
+  - name: httpd package insttaltion
+    package:
+      name: "httpd"
+      state: present
+  - name: start httpd service
+    service:
+      name: "httpd"
+      state: started
+
